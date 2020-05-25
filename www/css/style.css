@@ -29,7 +29,9 @@ header {
  
 
 #contents {
-  padding: 10px;
+  
+  padding: 10px 15px;
+  
 }
 
 
@@ -71,4 +73,34 @@ header {
 
 .ua-ios-7 .ui-header, .ua-ios-8 .ui-header {
     top: 20px;
+}
+
+.ui-body-c {
+ background: rgba(4, 23, 85, 0.911);
+ border-color: rgb(251, 255, 0);
+ box-shadow: 0 0 7px #ffee00f3;
+}
+
+/*buttonのフォント色*/
+.ui-body-c .ui-link {
+ color: #124075;
+}
+
+/*テキストの色*/
+.ui-content {
+ color: #ffffff;
+}
+
+/*ボタンがアクティブになると*/
+.button:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+/*入力文字の色*/
+.input-text{
+  color: rgb(255, 255, 255);
 }

@@ -12,7 +12,7 @@
     function calculate() {
         var month = $("#myname").val();
         var day = $("#myage").val();
-        var seiza = "エラー";
+        var seiza;
         if(month == 3 && day >= 21 || month == 4 && day <= 19){
           seiza = "おひつじ";
         }else
@@ -49,10 +49,11 @@
         if(month == 2 && day >= 19 || month == 3 && day <= 20){
           seiza = "うお";
         }
-        var text = seiza + " 座 !";
-        alert(text);
-        //navigator.notification.alert(text, null, "Welcome to Monaca！");
-    }
+        $("#result").text("あなたの星座は"+seiza+"座です！");
+        //alert(text);
+        
+        
+            }
   </script>
 </head>
 <body> 
@@ -63,12 +64,17 @@
       <section data-role="content">
 
         月
-        <input type="text" id="myname" class="input-text">
+        <input type="text" id="myname" class="input-text" placeholder="（月入力欄）">
         
         日
-        <input type="text" id="myage" class="input-text">
+        <input type="text" id="myage" class="input-text" placeholder="（日入力欄）">
 
         <a class="button" onclick="calculate();">判定！</a> 
+
+        <div id="result"
+        ></div>
+        
+
     </section>
   </div> 
 </body>
